@@ -35,7 +35,7 @@ export default function Contact() {
                 href="mailto:your.email@example.com"
                 className="text-gray-300 hover:text-orange-400"
               >
-                your.email@example.com
+                belaynewzewdie90@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-4">
@@ -44,12 +44,12 @@ export default function Contact() {
                 href="tel:+1234567890"
                 className="text-gray-300 hover:text-orange-400"
               >
-                +1 234 567 890
+                +251 954 454 027
               </a>
             </div>
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-orange-400 text-xl" />
-              <span className="text-gray-300">Adama, Ethiopia</span>
+              <span className="text-gray-300">Addis Ababa, Ethiopia</span>
             </div>
           </div>
         </div>
