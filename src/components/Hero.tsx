@@ -212,8 +212,8 @@ export default function Hero() {
               <Image
                 src="/hello.jpg"
                 alt="Belaynew Z"
-                width={320}
-                height={320}
+                width={320} // Add this
+                height={320} // Add this
                 className="object-cover w-full h-full"
                 priority
               />
