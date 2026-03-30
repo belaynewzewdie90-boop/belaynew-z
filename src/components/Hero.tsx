@@ -30,85 +30,21 @@ const socials = [
   },
 ];
 
-// Icons with their angles (in degrees) and distance from center (in pixels)
 const floatingTech = [
-  {
-    icon: <FaHtml5 />,
-    color: "#e34f26",
-    name: "HTML",
-    angle: 45,
-    distance: 200,
-    speed: 3,
-  },
-  {
-    icon: <FaCss3Alt />,
-    color: "#1572b6",
-    name: "CSS",
-    angle: 90,
-    distance: 200,
-    speed: 2.8,
-  },
-  {
-    icon: <SiTailwindcss />,
-    color: "#38bdf8",
-    name: "Tailwind",
-    angle: 135,
-    distance: 200,
-    speed: 3.2,
-  },
-  {
-    icon: <FaJsSquare />,
-    color: "#f0db4f",
-    name: "JavaScript",
-    angle: 180,
-    distance: 200,
-    speed: 3.5,
-  },
-  {
-    icon: <FaBootstrap />,
-    color: "#7952b3",
-    name: "Bootstrap",
-    angle: 225,
-    distance: 200,
-    speed: 3,
-  },
-  {
-    icon: <FaReact />,
-    color: "#61dafb",
-    name: "React",
-    angle: 270,
-    distance: 200,
-    speed: 3.8,
-  },
-  {
-    icon: <FaNodeJs />,
-    color: "#68a063",
-    name: "Node.js",
-    angle: 315,
-    distance: 200,
-    speed: 3.6,
-  },
-  {
-    icon: <SiMongodb />,
-    color: "#47a248",
-    name: "MongoDB",
-    angle: 0,
-    distance: 200,
-    speed: 4,
-  },
-  {
-    icon: <SiMysql />,
-    color: "#4479a1",
-    name: "MySQL",
-    angle: 20,
-    distance: 220,
-    speed: 3.4,
-  }, // slightly farther
+  { icon: <FaHtml5 />, color: "#e34f26", name: "HTML", angle: 45, distance: 200, speed: 3 },
+  { icon: <FaCss3Alt />, color: "#1572b6", name: "CSS", angle: 90, distance: 200, speed: 2.8 },
+  { icon: <SiTailwindcss />, color: "#38bdf8", name: "Tailwind", angle: 135, distance: 200, speed: 3.2 },
+  { icon: <FaJsSquare />, color: "#f0db4f", name: "JavaScript", angle: 180, distance: 200, speed: 3.5 },
+  { icon: <FaBootstrap />, color: "#7952b3", name: "Bootstrap", angle: 225, distance: 200, speed: 3 },
+  { icon: <FaReact />, color: "#61dafb", name: "React", angle: 270, distance: 200, speed: 3.8 },
+  { icon: <FaNodeJs />, color: "#68a063", name: "Node.js", angle: 315, distance: 200, speed: 3.6 },
+  { icon: <SiMongodb />, color: "#47a248", name: "MongoDB", angle: 0, distance: 200, speed: 4 },
+  { icon: <SiMysql />, color: "#4479a1", name: "MySQL", angle: 20, distance: 220, speed: 3.4 },
 ];
 
 export default function Hero() {
   const [displayedName, setDisplayedName] = useState("");
-  const fullName = "Belaynew Z";
+  const fullName = "Belaynew Zewdie"; // Updated your name here
 
   useEffect(() => {
     let i = 0;
@@ -121,62 +57,43 @@ export default function Hero() {
       }
     }, 150);
     return () => clearInterval(interval);
-  }, []);
+  }, [fullName]);
 
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden"
-    >
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden bg-black">
       <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left: Text */}
+        
+        {/* Left: Text Content */}
         <div className="text-left">
-          {/* ... (same as before) */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-orange-400 text-xl md:text-2xl tracking-widest mb-4"
+            className="text-orange-400 text-xl md:text-2xl tracking-widest mb-4 uppercase"
           >
-            HI THERE!
+            Hi There!
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-4"
+            className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-white flex flex-wrap items-center"
           >
-         <motion.h1
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.3 }}
-  // ADD 'text-white' HERE 👇
-  className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-white"
->
-  I'm{" "}
-  <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent inline-block">
-    {displayedName}
-  </span>
-  <span className="animate-blink ml-1 text-7xl text-orange-500">|</span>
-</motion.h1>   <motion.h1
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.3 }}
-  className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-4 flex items-center"
->
-  I'm{" "}
-  <span className="ml-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent inline-block min-w-[1ch]">
-    {displayedName}
-  </span>
-  <motion.span 
-    animate={{ opacity: [1, 0] }}
-    transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-    className="ml-1 text-orange-500 font-light"
-  >
-    |
-  </motion.span>
-</motion.h1>
+            I&apos;m{" "}
+            <span className="ml-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent inline-block">
+              {displayedName}
+            </span>
+            <motion.span
+              animate={{ opacity: [1, 0] }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+              className="ml-1 text-orange-500"
+            >
+              |
+            </motion.span>
+          </motion.h1>
+
+          <motion.p
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
@@ -189,11 +106,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.6 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-xl leading-relaxed mb-8"
+            className="text-xl md:text-2xl text-gray-400 max-w-xl leading-relaxed mb-8"
           >
-            Looking for a React or NEXT.js developer?
+            Looking for a React or Next.js developer?
             <br />
-            I'm open to freelance collaborations!
+            I&apos;m open to freelance collaborations!
           </motion.p>
 
           {/* Social Icons */}
@@ -201,7 +118,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.2 }}
-            className="flex gap-4"
+            className="flex gap-6"
           >
             {socials.map((social, i) => (
               <motion.a
@@ -209,7 +126,7 @@ export default function Hero() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ y: -3, scale: 1.1 }}
+                whileHover={{ y: -5, scale: 1.1 }}
                 className="text-3xl"
                 style={{ color: social.color }}
                 title={social.label}
@@ -220,29 +137,27 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: Circular profile image with floating skill icons centered around it */}
+        {/* Right: Profile Image & Tech Orbit */}
         <div className="relative flex justify-center items-center h-[500px] w-full">
-          {/* Profile image (center) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, delay: 1.8 }}
             className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" />
+            <div className="absolute inset-0 bg-orange-500 rounded-full blur-[100px] opacity-20 animate-pulse" />
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
               <Image
                 src="/hello.jpg"
-                alt="Belaynew Z"
-                width={320} // Add this
-                height={320} // Add this
+                alt="Belaynew Zewdie"
+                width={320}
+                height={320}
                 className="object-cover w-full h-full"
                 priority
               />
             </div>
           </motion.div>
 
-          {/* Floating skill icons positioned relative to center */}
           {floatingTech.map((tech, i) => {
             const rad = (tech.angle * Math.PI) / 180;
             const x = Math.cos(rad) * tech.distance;
@@ -253,41 +168,18 @@ export default function Hero() {
                 key={i}
                 className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                 initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  x: x,
-                  y: y,
-                }}
-                transition={{
-                  duration: 1.8,
-                  delay: 2.5 + i * 0.15,
-                  ease: "easeOut",
-                }}
+                animate={{ opacity: 1, scale: 1, x, y }}
+                transition={{ duration: 1.8, delay: 2.5 + i * 0.1 }}
               >
                 <motion.div
-                  animate={{
-                    y: [0, -8, 0],
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: tech.speed,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                  }}
+                  animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
+                  transition={{ duration: tech.speed, repeat: Infinity, ease: "easeInOut" }}
                   className="flex flex-col items-center"
                 >
-                  <div
-                    className="text-4xl md:text-5xl"
-                    style={{
-                      color: tech.color,
-                      filter: "drop-shadow(0 0 8px currentColor)",
-                    }}
-                  >
+                  <div className="text-4xl md:text-5xl" style={{ color: tech.color, filter: "drop-shadow(0 0 8px currentColor)" }}>
                     {tech.icon}
                   </div>
-                  <span className="mt-1 text-xs md:text-sm font-medium text-gray-300 bg-black/50 px-2 py-0.5 rounded-full">
+                  <span className="mt-1 text-xs font-medium text-gray-300 bg-black/60 px-2 py-0.5 rounded-full">
                     {tech.name}
                   </span>
                 </motion.div>
