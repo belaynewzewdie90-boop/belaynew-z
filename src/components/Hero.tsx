@@ -147,7 +147,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-4"
           >
-            I'm{" "}
+            I'm{"I am "}
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
               {displayedName}
             </span>
