@@ -62,7 +62,7 @@ export default function About() {
           {/* Stats + CV Button */}
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-10 pt-8">
             <div className="text-4xl md:text-5xl font-bold text-orange-400">
-              5 Projects complete
+              5 Projects Done
             </div>
 
             <motion.a
