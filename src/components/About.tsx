@@ -47,15 +47,7 @@ export default function About() {
         >
           <div className="text-xl md:text-2xl text-gray-300 leading-relaxed space-y-6">
             <p>
-              Hello, I'm Belaynew Zewdie, dynamic and detail-oriented Web
-              Developer with expertise in full-stack development, specialized in
-              React and the MERN stack. Experienced in delivering technical
-              solutions, solving complex problems, and leading projects from
-              concept to completion. Known for strong work ethics, adaptability,
-              and a passion for creating secure, scalable, and user-friendly
-              applications. Skilled in fostering team collaboration,
-              streamlining operations, and building lasting relationships with
-              stakeholders.
+              Hello, "I am Belaynew Zewdie, a Full-Stack Engineer specializing in building scalable, high-performance web applications. With a deep mastery of the MERN stack, Next.js, and Cloud Infrastructure, I bridge the gap between elegant frontend interfaces and robust backend systems. Beyond coding, I leverage Docker, Linux, and AWS to ensure seamless deployment and system reliability. I am driven by the challenge of turning complex problems into secure, user-centric digital solutions."
             </p>
           </div>
 
