@@ -11,7 +11,7 @@ const projects = [
     description:
       "Real-time weather app with city search, temperature, humidity, and dynamic UI.",
     image: "/images/projects/weather-app.jpg",
-    tech: ["Next.js", "TypeScript", "Tailwind", "OpenWeather API"],
+    tech: ["Html", "JavaScript", "Css", "OpenWeather API"],
     github: "https://github.com/yourusername/weather-app",
     live: "https://weather-app.vercel.app",
   },
@@ -20,7 +20,7 @@ const projects = [
     description:
       "Movie discovery platform with search for titles, actors, and trending posters.",
     image: "/images/projects/moviedb.jpg",
-    tech: ["React", "TypeScript", "Tailwind", "TMDB API"],
+    tech: ["React", "JavaScript", "Css", "TMDB API"],
     github: "https://github.com/yourusername/moviedb",
     live: "https://moviedb.vercel.app",
   },
@@ -29,7 +29,7 @@ const projects = [
     description:
       "Admin panel for product management with stock, price, and analytics.",
     image: "/images/projects/admin-dashboard.jpg",
-    tech: ["React", "TypeScript", "Tailwind", "Chart.js"],
+    tech: ["React", "JavaScript", "Tailwind", "Chart.js"],
     github: "https://github.com/yourusername/admin-dashboard",
     live: "https://admin-dashboard.vercel.app",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Job listing and posting platform with search and apply functionality.",
     image: "/images/projects/job-portal.jpg",
-    tech: ["Next.js", "MongoDB", "TypeScript", "Tailwind"],
+    tech: ["Html", "Css", "MongoDB",  "React.js",  "Express", "Node.js", "RESTAPI"],
     github: "https://github.com/yourusername/job-portal",
     live: "https://job-portal.vercel.app",
   },
