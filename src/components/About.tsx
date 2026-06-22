@@ -1,79 +1,89 @@
 "use client";
 
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="py-24 md:py-32 px-6 max-w-7xl mx-auto bg-black text-white relative overflow-hidden"
-    >
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-cyan-900/10 pointer-events-none" />
+    <div className="max-w-6xl mx-auto px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600">
+          About Me
+        </h2>
+        <p className="text-gray-400 mt-4 text-lg">
+          Engineering Precision × Web Development Scale
+        </p>
+      </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* Left – Profile Image */}
+      <div className="grid md:grid-cols-12 gap-12 items-center">
+        {/* Left Side: Professional Bio */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex justify-center md:justify-start"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="md:col-span-7 space-y-6 text-gray-300 text-lg leading-relaxed"
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-shadow duration-500">
-            <Image
-              src="/belay.jpg"
-              alt="Belaynew Z"
-              width={400}
-              height={400}
-              className="object-cover w-full h-full"
-              priority
-            />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-[-6px] rounded-full border-2 border-purple-500/30 animate-pulse-slow" />
-          </div>
+          <p>
+            Hello, I’m Belaynew Zewdie. As a dynamic and detail-oriented
+            engineer, I bridge the gap between hardware architecture and
+            full-stack software development. With deep expertise in
+            React/Next.js, the MERN/PERN stack, and DevOps tools like Docker and
+            Linux, I focus on building systems that are not only visually
+            appealing but structurally robust. My project portfolio ranges from
+            interactive personal finance dashboards to advanced enterprise
+            systems like a E-ecomerce platform. I am highly adaptable, value
+            strong engineering ethics, and excel at collaborating with
+            cross-functional teams to streamline development pipelines and
+            deliver secure, scalable platforms from start to finish.
+          </p>
         </motion.div>
 
-        {/* Right – Text Content */}
+        {/* Right Side: Key Pillars / Stats */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="space-y-8 text-center md:text-left"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="md:col-span-5 grid grid-cols-1 gap-4"
         >
-          <div className="text-xl md:text-2xl text-gray-300 leading-relaxed space-y-6">
-            <p>
-              Hello, "I am Belaynew Zewdie, a Full-Stack Engineer specializing in building scalable, high-performance web applications. With a deep mastery of the MERN stack, Next.js, and Cloud Infrastructure, I bridge the gap between elegant frontend interfaces and robust backend systems. Beyond coding, I leverage Docker, Linux, and AWS to ensure seamless deployment and system reliability. I am driven by the challenge of turning complex problems into secure, user-centric digital solutions."
+          <div className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800 hover:border-orange-500/30 transition-all">
+            <h4 className="text-orange-400 font-bold text-xl mb-2">
+              ⚡ Engineering Core
+            </h4>
+            <p className="text-gray-400 text-sm">
+              A foundation in system routing, signal optimization, and
+              programmatic problem-solving.
             </p>
           </div>
 
-          {/* Stats + CV Button */}
-          <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-10 pt-8">
-            <div className="text-4xl md:text-5xl font-bold text-orange-400">
-              5 Projects Done
-            </div>
+          <div className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800 hover:border-purple-500/30 transition-all">
+            <h4 className="text-purple-400 font-bold text-xl mb-2">
+              🌐 Full-Stack Developer
+            </h4>
+            <p className="text-gray-400 text-sm">
+              Building high-performance user spaces using React.js and Next.js,
+              backed by structured APIs.
+            </p>
+          </div>
 
-            <motion.a
-              href="/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(249, 115, 22, 0.5)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-4 px-10 py-5 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 rounded-full text-xl font-medium shadow-xl shadow-orange-500/30 transition-all hover:scale-105 hover:shadow-orange-500/50"
-            >
-              PREVIEW my CV
-              <FaArrowRight className="text-2xl" />
-            </motion.a>
+          <div className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800 hover:border-pink-500/30 transition-all">
+            <h4 className="text-pink-400 font-bold text-xl mb-2">
+              🐳 DevOps & Infrastructure.
+            </h4>
+            <p className="text-gray-400 text-sm">
+              Containerizing applications with Docker, managing workflows inside
+              Linux environments, and deploying to AWS.
+            </p>
           </div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

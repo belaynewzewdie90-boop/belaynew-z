@@ -14,6 +14,7 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb, SiMysql } from "react-icons/si";
+import CVModal from "./CVModal";
 
 const socials = [
   {
@@ -134,6 +135,16 @@ export default function Hero() {
                 {social.icon}
               </motion.a>
             ))}
+          </motion.div>
+
+          {/* CV Modal Trigger */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.6 }}
+            className="mt-10"
+          >
+            <CVModal />
           </motion.div>
         </div>
 

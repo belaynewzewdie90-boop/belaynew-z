@@ -84,7 +84,7 @@ export default function CVModal() {
                     The PDF could not be displayed. Please download it directly.
                   </p>
                   <motion.a
-                    href="/cv.pdf"
+                    href="./cv.pdf"
                     download="Belaynew-Zewdie-CV.pdf"
                     whileHover={{ scale: 1.05 }}
                     className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-full shadow-xl"
