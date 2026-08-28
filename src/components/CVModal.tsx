@@ -69,7 +69,7 @@ export default function CVModal() {
               {/* PDF Viewer with Error Handling */}
               {!pdfError ? (
                 <iframe
-                  src="/cv.pdf"
+                  src="/Belaynew.cv.pdf"
                   className="w-full h-full border-none"
                   title="Belaynew Zewdie CV"
                   onError={handleIframeError}
@@ -84,7 +84,7 @@ export default function CVModal() {
                     The PDF could not be displayed. Please download it directly.
                   </p>
                   <motion.a
-                    href="./cv.pdf"
+                    href="/Belaynew.cv.pdf"
                     download="Belaynew-Zewdie-CV.pdf"
                     whileHover={{ scale: 1.05 }}
                     className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-full shadow-xl"
@@ -97,7 +97,7 @@ export default function CVModal() {
 
               {/* Download Button (always visible) */}
               <motion.a
-                href="/cv.pdf"
+                href="/Belaynew.cv.pdf"
                 download="Belaynew-Zewdie-CV.pdf"
                 whileHover={{ scale: 1.05 }}
                 className="absolute bottom-6 left-1/2 transform -translate-x-1/2 px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-full text-lg shadow-xl shadow-purple-500/30 hover:shadow-purple-500/60 transition-all flex items-center gap-3"
