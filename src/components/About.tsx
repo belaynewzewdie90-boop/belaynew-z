@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -22,12 +23,32 @@ export default function About() {
       </motion.div>
 
       <div className="grid md:grid-cols-12 gap-12 items-center">
-        {/* Left Side: Professional Bio */}
+        {/* Left Side: Photo */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="md:col-span-5 flex justify-center"
+        >
+          <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+            <Image
+              src="/belay.jpg"
+              alt="Belaynew Zewdie"
+              fill
+              sizes="(max-width: 768px) 288px, 320px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </motion.div>
+
+        {/* Right Side: Professional Bio */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="md:col-span-7 space-y-6 text-gray-300 text-lg leading-relaxed"
         >
           <p>
@@ -50,8 +71,8 @@ export default function About() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="md:col-span-5 grid grid-cols-1 gap-4"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-4 mt-10"
         >
           <div className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800 hover:border-orange-500/30 transition-all">
             <h4 className="text-orange-400 font-bold text-xl mb-2">

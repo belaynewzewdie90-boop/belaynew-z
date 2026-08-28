@@ -20,58 +20,49 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Hybrid-Cloud Edge Synchronization Engine",
+    title: "AI-Powered Ethiopian Job Marketplace",
     description:
-      "Enterprise network resilience system localized to manage data state stability and sync to central cloud networks post-outages.",
-    tech: ["Node.js", "Docker", "Linux CLI", "PostgreSQL", "Edge Caching"],
-    image: "/projects/hybrid-cloud.jpg",
-    github: "https://github.com/belaynewzewdie90-boop/hybrid-cloud-sync",
-    live: "https://github.com/belaynewzewdie90-boop/hybrid-cloud-sync",
+      "AI-powered job marketplace connecting Ethiopian job seekers with companies. Features job posting, search, candidate profiles, CV management, applications, tracking, recruiter dashboards, and AI-powered matching based on skills, experience, and education.",
+    tech: ["Next.js", "Node.js", "Express.js", "PostgreSQL", "Prisma", "AI", "REST API", "Docker"],
+    image: "/ai-job.jpg",
+    github: "https://github.com/belaynewzewdie90-boop/ai-job-market-place.git",
+    live: "https://ai-job-market-place.vercel.app/",
   },
   {
-    title: "Merkato Store App",
+    title: "QR Code-Based Smart Hotel Food Ordering & Management System",
     description:
-      "Robust, secure retail e-commerce application built to digitize brick-and-mortar storefronts with dynamic checkout pipelines.",
-    tech: ["React.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-    image: "/projects/merkato-store.jpg",
-    github: "https://github.com/belaynewzewdie90-boop/merkato-store",
-    live: "https://merkato-store.vercel.app",
-  },
-  {
-    title: "Hotel Management & Food Order System",
-    description:
-      "High-performance management engine tracking room bookings, restaurant culinary arrays, and live real-time metrics.",
-    tech: ["React.js", "Node.js", "Express", "PostgreSQL", "Prisma ORM"],
+      "QR-code-based hotel food ordering system for scanning table QR codes, browsing digital menus, and placing orders from phones. Includes Admin, Kitchen, and Store/Inventory modules with automatic inventory deduction and order status tracking.",
+    tech: ["React", "Node.js", "Express.js", "PostgreSQL", "Supabase", "QR Code", "REST API"],
     image: "/projects/hotel-system.jpg",
-    github: "https://github.com/belaynewzewdie90-boop/hotel-management",
-    live: "https://hotel-management.vercel.app",
+    github: "https://github.com/belaynewzewdie90-boop/Hotel-MGT-Frontend.git",
+    live: "https://hotel-mgt-frontend-two.vercel.app/",
   },
   {
-    title: "Expense Tracker Dashboard",
+    title: "EYTA – Video Watch & Earn Platform",
     description:
-      "A modern, high-performance personal finance tracking web application with live UI updates and responsive budget layouts.",
-    tech: ["React.js", "Vite", "Tailwind CSS v4", "JavaScript"],
-    image: "/projects/expense-tracker.jpg",
-    github: "https://github.com/belaynewzewdie90-boop/expense-tracker",
-    live: "https://expense-tracker.vercel.app",
+      "Platform where users watch assigned videos, earn rewards, and withdraw balances. Includes video management, wallet management, withdrawal requests, admin approval, and user/admin dashboards.",
+    tech: ["React", "Vite", "React Router", "Context API", "Node.js", "REST API"],
+    image: "/eyta.jpg",
+    github: "https://github.com/belaynewzewdie90-boop/Eyta-in-frontend.git",
+    live: "https://eyta-in-frontend.vercel.app/",
   },
   {
-    title: "MovieDB",
+    title: "MERKATO STORE – Full-Stack E-Commerce",
     description:
-      "Movie discovery platform with search mechanisms and trending layouts.",
-    tech: ["React", "JavaScript", "CSS", "TMDB API"],
-    image: "/projects/moviedb.jpg",
-    github: "https://github.com/belaynewzewdie90-boop/MoveDB",
-    live: "https://belaynewzewdie90-boop.github.io/MoveDB/",
+      "Full-stack e-commerce platform for product discovery, shopping, ordering, and store management. Features authentication, cart, checkout, order tracking, admin management, real-time communication, and AI-powered product discovery.",
+    tech: ["React", "Vite", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "Socket.IO", "AI"],
+    image: "/projects/merkato-store.jpg",
+    github: "#",
+    live: "https://merkato-store-alpha.vercel.app/",
   },
   {
-    title: "Weather App",
+    title: "Cinema Management & Ticket Booking System",
     description:
-      "Real-time weather companion built with localized geographical API parsing and dynamic layouts.",
-    tech: ["HTML", "JavaScript", "CSS", "OpenWeather API"],
-    image: "/projects/weather-app.jpg",
-    github: "https://github.com/belaynewzewdie90-boop/Weather-App",
-    live: "https://belaynewzewdie90-boop.github.io/Weather-App/",
+      "Cinema management and ticket booking platform for managing movies, showtimes, customers, and bookings. Includes customer-facing browsing/booking and admin management with responsive web interface.",
+    tech: ["React", "JavaScript", "TypeScript", "REST API", "Backend API", "Database"],
+    image: "/cinema-book.jpg",
+    github: "https://github.com/belaynewzewdie90-boop/Cinema-System-frontend.git",
+    live: "https://cinema-system-frontend.vercel.app/",
   },
 ];
 
