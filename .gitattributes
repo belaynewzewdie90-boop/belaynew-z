@@ -1,0 +1,6 @@
+# Never treat these as text (prevents line-ending / encoding corruption)
+*.pdf binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.ico binary

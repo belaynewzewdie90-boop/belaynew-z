@@ -48,9 +48,6 @@ export default function GradientBg({
       onMouseMove={handleMouseMove}
       suppressHydrationWarning // 👈 Ignores extra attributes from extensions
     >
-      {/* Solid black background */}
-      <div className="absolute inset-0 bg-black z-0" />
-
       {/* Interactive gradients */}
       <motion.div
         className="absolute inset-0 pointer-events-none z-10"

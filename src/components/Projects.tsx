@@ -4,7 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import type { Project } from "@/app/page";
+import SectionHeading from "./SectionHeading";
+import type { Project } from "@/data/portfolio";
 
 type ProjectsProps = {
   projects: Project[];
@@ -12,77 +13,90 @@ type ProjectsProps = {
 
 export default function Projects({ projects }: ProjectsProps) {
   return (
-    <section id="projects" className="py-20 px-6 max-w-7xl mx-auto bg-gray-900/50">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
-          My Recent Projects
-        </h2>
-        <p className="text-gray-400 mt-4">Personal & Enterprise Applications</p>
-      </motion.div>
+    <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">
+      <SectionHeading
+        eyebrow="Portfolio"
+        title="Featured Projects"
+        subtitle="Real, deployed applications — click through to try them live or read the code."
+      />
 
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <motion.div
+          <motion.article
             key={project.title}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
-            whileHover={{ y: -8 }}
-            className="bg-black/60 border border-gray-800 rounded-3xl overflow-hidden hover:border-orange-500/50 hover:shadow-xl transition-all flex flex-col justify-between"
+            transition={{ duration: 0.5, delay: (index % 2) * 0.1 }}
+            className={`group bg-gray-950/80 border border-gray-800 rounded-3xl overflow-hidden hover:border-orange-500/50 hover:-translate-y-1 transition-all duration-300 flex flex-col ${
+              index === 0 ? "md:col-span-2" : ""
+            }`}
           >
-            <div>
-              <div className="relative h-48 w-full">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
+            <div className={`relative w-full overflow-hidden ${index === 0 ? "h-64 md:h-80" : "h-52"}`}>
+              <Image
+                src={project.image}
+                alt={`Screenshot of ${project.title}`}
+                fill
+                sizes={index === 0 ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              {index === 0 && (
+                <span className="absolute top-4 left-4 px-3 py-1 bg-orange-500 text-black text-xs font-bold rounded-full uppercase tracking-wide">
+                  Featured
+                </span>
+              )}
+            </div>
+
+            <div className="p-6 flex flex-col flex-1">
+              <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+              <p className="text-gray-300 mb-4">{project.summary}</p>
+
+              <ul className="space-y-1.5 mb-5 text-gray-400 text-sm">
+                {project.highlights.map((h) => (
+                  <li key={h} className="flex gap-2">
+                    <span className="text-orange-400">▹</span>
+                    {h}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 bg-white/5 border border-gray-800 text-gray-300 text-xs font-medium rounded-full"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((t, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-purple-600/30 text-purple-300 text-sm rounded-full"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+
+              <div className="mt-auto flex flex-wrap gap-3">
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-full transition-colors"
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                    Live Demo
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-700 hover:border-white text-gray-200 font-semibold rounded-full transition-colors"
+                  >
+                    <FaGithub />
+                    Source Code
+                  </a>
+                )}
               </div>
             </div>
-            <div className="p-6 pt-0 flex gap-4">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors"
-              >
-                <FaGithub />
-              </a>
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors"
-              >
-                <FaExternalLinkAlt />
-              </a>
-            </div>
-          </motion.div>
+          </motion.article>
         ))}
       </div>
     </section>
